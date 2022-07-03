@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="form.css">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <form method="post" action="result.html">
+    <div>
+      <h1 id="h"> <u> Student Record</u></h1>
+  </div>
+    <div class="container bg-light w-50 mx-10  con">
+       
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Father Name:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" >
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Gender:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" >
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Contact:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Institude:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Class:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Semester:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2">
+      </div>
+      
+    </div>
+    <div>
+      <h1 id="h"> <u>Student Marks</u> </h1>
+  </div>
+    <div class="container w-50  mx-10  con1">
+      <table class="table">
+        <thead class="table-light">
+          <tr>
+            <th>Sr </th>
+            <th>Subject</th>
+            <th id="tm">Total Marks</th>
+            <th>Obtained Marks</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td class="sub">
+                    <input type="text" required>
+                </td>
+                <td><input type="text" ></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    2
+                </td>
+                <td class="sub">
+                    <input type="text" required>
+                </td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    3
+                </td>
+                <td class="sub">
+                    <input type="text" required>
+                </td>
+                <td><input type="number"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    4
+                </td>
+                <td class="sub">
+                    <input type="text" required>
+                </td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    5
+                </td>
+                <td class="sub">
+                    <input type="text" required>
+                </td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">Total</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div style="text-align:center;" >
+      <button onclick="readFromData()" type="button" class="btn btn-outline-warning">Submit</button>
+    </div>
+    
+  </form>
+       <!-- Bootstrap JavaScript Libraries -->
+       <script typr="text/javescript">
+
+        
+        
+        function onFormSubmit() {
+            var fromData = readFromData();
+            }
+            // taking input data from the user 
+            function readFromData(){
+                var fromData ={};
+         fromData ["name"] = document.getElementById("a1").value;                                                                             
+         fromData ["father"] = document.getElementById("a2").value;
+         fromData ["cnt "]= document.getElementById("a3").value;
+         fromData ["insti"] = document.getElementById("a4").value;
+         fromData ["cls "]= document.getElementById("a5").value;
+         fromData ["result"] = document.getElementById("a6").value;
+
+        
+                 return fromData;
+        }
+                function insertNweRecord(data){
+                    var table = document.getElementById("detail").getElementsByTagName('tbody')[0];
+                    var newRow = table.insertRow(table.length);
+                    cell1 = newRow.insertCell(0);
+                    cell1.innerHTML = data.name;
+                    cell2 = newRow.insertCell(0);
+                    cell2.innerHTML = data.father;
+                    cell3 = newRow.insertCell(0);
+                    cell3.innerHTML = data.cnt;
+                    cell4 = newRow.insertCell(0);
+                    cell4.innerHTML = data.insti;
+                    cell5 = newRow.insertCell(0);
+                    cell5.innerHTML = data.cls;
+                    cell6 = newRow.insertCell(0);
+                    cell6.innerHTML = data.result;
+
+
+                }
+</script>
+    
+  </body>
+</html>

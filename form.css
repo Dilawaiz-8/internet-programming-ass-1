@@ -1,0 +1,33 @@
+.body{
+    text-align: center;
+}
+.con {
+font-family: 'Times New Roman', Times, serif;
+border-collapse: collapse;
+align-items: center;
+background-color: rgba(241, 238, 240, 0.185);
+padding-bottom: 10px;
+padding-top: 10px;
+}
+.t2{
+font-family: sans-serif;
+border-collapse: collapse;
+text-align: center;
+}
+.sub
+{
+text-align: left;
+}
+#h{
+    text-align: center;
+   padding-top: 5px;
+   font-family: 'Times New Roman', Times, serif;
+}
+.con1 {
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    align-items: center;
+    background-color: rgba(241, 238, 240, 0.185);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    }
